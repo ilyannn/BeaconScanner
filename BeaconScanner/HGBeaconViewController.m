@@ -45,7 +45,9 @@
                 [self insertObject:existingBeacon inBeaconsAtIndex:existingBeaconIndex];
             } else {
                 [self addBeaconsObject:beacon];
+				NSLog(@"NEW BEACON: %@", beacon);
             }
+			
         }];
         
         // Setup a interval signal that will purge expired beacons (determined by a last update longer than HGBeaconTimeToLiveInterval) from the displayed list
