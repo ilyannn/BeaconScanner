@@ -45,7 +45,7 @@
                 [self insertObject:existingBeacon inBeaconsAtIndex:existingBeaconIndex];
             } else {
                 [self addBeaconsObject:beacon];
-				NSLog(@"NEW BEACON: %@", beacon);
+				NSLog(@"FOUND: %@", beacon);
             }
 			
         }];

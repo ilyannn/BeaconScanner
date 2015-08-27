@@ -162,14 +162,19 @@ NSString *const HGBeaconAdvertismentManufacturerDataKey = @"kCBAdvDataAppleBeaco
     return beaconCopy;
 }
 
-- (NSString *)proximityUUIDString 
-{
+
+
+
+#pragma mark - Description
+
+-(NSString *)proximityUUIDString {
 	return [self.proximityUUID UUIDString];
 }
 
-- (NSString *)description {
-	id object = [self dictionaryWithValuesForKeys:@[@"proximityUUIDString", @"major", @"minor", @"RSSI"]];
-	return [object description];
+-(NSString *)description {
+	NSArray *keys = @[@"proximityUUIDString", @"major", @"minor", @"RSSI"];
+	id values = [self dictionaryWithValuesForKeys:keys];
+	return [values description];
 }
 
 @end
